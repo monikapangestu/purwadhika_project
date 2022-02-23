@@ -5,6 +5,7 @@ usia =[27,29,26,2]
 berat =[100,62,45,10]
 tinggi =[175,158,160,100]
 noHp =['089532977853','089532966728','089530019927','0225422398']
+cekkolom=['nama','kode','jenis','usia','berat','tinggi','no hp']
 
 # Command Header Data Pasien
 def header() :
@@ -40,6 +41,7 @@ def menu4():
                 n=0
                 while n==0 :
                     cek=input('Apakah data akan dihapus (Y/N)?')
+                    cek=cek.upper()
                     if cek=='Y':
                         del kodepasien[index]
                         del nama[index]
@@ -88,32 +90,44 @@ def menu3():
                 m=0
                 while l==0 :
                     cek=input('Lanjut Update (Y/N)?')
+                    cek=cek.upper()
                     if cek=='Y':
-                        ubah=input('Apa yang ingin diubah ?')
-                        ubah=ubah.lower()
-                        ubah1=input('Masukkan {} baru :'.format(ubah))
-                        while m==0 :
-                                cek=input('Data akan diupdate (Y/N)? ')
-                                if cek=='Y':
-                                    if ubah =='nama':
-                                        nama[index]=ubah1
-                                    elif ubah =='kode':
-                                        kodepasien[index]=ubah1
-                                    elif ubah =='jenis':
-                                        jenis[index]=ubah1
-                                    elif ubah =='usia':
-                                        usia[index]=ubah1
-                                    elif ubah =='berat':
-                                        berat[index]=ubah1
-                                    elif ubah =='tinggi':
-                                        tinggi[index]=ubah1
-                                    elif ubah =='no hp':
-                                        noHp[index]=ubah1
-                                    print('Data berhasil diupdate !')
-                                    m=1
-                                elif cek=='N':
-                                    print('Data tidak jadi diupdate')
-                                    m=1
+                        n=0
+                        while n==0:
+                            ubah=input('Apa yang ingin diubah ?')
+                            ubah=ubah.lower()
+                            for c in cekkolom :
+                                if c==ubah :
+                                    d=1
+                                    if d == 1:
+                                        ubah1=input('Masukkan {} baru :'.format(ubah))
+                                        while m==0 :
+                                                cek=input('Data akan diupdate (Y/N)? ')
+                                                cek=cek.upper()
+                                                if cek=='Y':
+                                                    if ubah =='nama':
+                                                        nama[index]=ubah1
+                                                    elif ubah =='kode':
+                                                        kodepasien[index]=ubah1
+                                                    elif ubah =='jenis':
+                                                        jenis[index]=ubah1
+                                                    elif ubah =='usia':
+                                                        usia[index]=ubah1
+                                                    elif ubah =='berat':
+                                                        berat[index]=ubah1
+                                                    elif ubah =='tinggi':
+                                                        tinggi[index]=ubah1
+                                                    elif ubah =='no hp':
+                                                        noHp[index]=ubah1
+                                                    print('Data berhasil diupdate !')
+                                                    m=1
+                                                elif cek=='N':
+                                                    print('Data tidak jadi diupdate')
+                                                    m=1
+                                        n=1
+                                else :
+                                    n=0
+                            
                         l=1
                     if cek=='N':
                         print('Data tidak jadi terupdate')
@@ -163,6 +177,7 @@ def menu2():
                 l=0
                 while l==0 :
                     cek=input('Apakah anda sudah yakin (Y/N)? ')
+                    cek=cek.upper()
                     if cek =='Y':
                         kodepasien=kodepasien+[kodeadd]
                         nama=nama+[namaadd]
