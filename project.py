@@ -57,7 +57,7 @@ def menu4():
                         n=1
             else :
                 print('Kode pasien tidak ditemukan !')
-        if inputmenu1=='2' :
+        elif inputmenu1=='2' :
             k=1
             menu0()
 
@@ -102,9 +102,9 @@ def menu3():
                                     if d == 1:
                                         ubah1=input('Masukkan {} baru :'.format(ubah))
                                         while m==0 :
-                                                cek=input('Data akan diupdate (Y/N)? ')
-                                                cek=cek.upper()
-                                                if cek=='Y':
+                                                cek1=input('Data akan diupdate (Y/N)? ')
+                                                cek1=cek1.upper()
+                                                if cek1=='Y':
                                                     if ubah =='nama':
                                                         nama[index]=ubah1
                                                     elif ubah =='kode':
@@ -121,15 +121,12 @@ def menu3():
                                                         noHp[index]=ubah1
                                                     print('Data berhasil diupdate !')
                                                     m=1
-                                                elif cek=='N':
-                                                    print('Data tidak jadi diupdate')
+                                                elif cek1=='N':
                                                     m=1
-                                        n=1
-                                else :
-                                    n=0
-                            
+                                                    print('Data tidak terupdate')
+                                    n=1 
                         l=1
-                    if cek=='N':
+                    elif cek=='N':
                         print('Data tidak jadi terupdate')
                         l=1
             else :
@@ -190,7 +187,7 @@ def menu2():
                         l=1
                     if cek=='N':
                         l=1
-        if inputmenu1=='2' :
+        elif inputmenu1=='2' :
             k=1
             menu0()
 
@@ -219,21 +216,21 @@ def menu1():
             else :
                 print('!!!!!!!!!!! Tidak ada data pasien !!!!!!!!!!!')
 
-        if inputmenu1=='2' :
+        elif inputmenu1=='2' :
             b=0
             inputmenu11=input('Masukkan kode pasien: ')
             for a in kodepasien :
                 if a == inputmenu11 :
                     b=1
                     break
-            if b == '1' :
+            if b == 1 :
                 print('Data pasien dengan kode {} :'.format(inputmenu11))
                 header ()
                 j=kodepasien.index(inputmenu11)
                 datapasien(j)
             else :
                 print('Data Pasien tidak ditemukan!')
-        if inputmenu1=='3' :
+        elif inputmenu1=='3' :
             k=1
             menu0()
 
