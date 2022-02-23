@@ -90,6 +90,7 @@ def menu3():
                     cek=input('Lanjut Update (Y/N)?')
                     if cek=='Y':
                         ubah=input('Apa yang ingin diubah ?')
+                        ubah=ubah.lower()
                         ubah1=input('Masukkan {} baru :'.format(ubah))
                         while m==0 :
                                 cek=input('Data akan diupdate (Y/N)? ')
@@ -154,7 +155,7 @@ def menu2():
                 print('Kode pasien telah digunakan !')
             else :
                 namaadd = input('Masukkan Nama :')
-                jenisadd = input('Masukkan Jenis Kelamin :')
+                jenisadd = input('Masukkan Jenis Kelamin (L/P):')
                 usiaadd = int(input('Masukkan Usia :'))
                 beratadd = int(input('Masukkan Berat :'))
                 tinggiadd = int(input('Masukkan Tinggi :'))
