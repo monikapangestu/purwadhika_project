@@ -25,10 +25,10 @@ def menu4():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
+        inputmenu1=input('Masukkan menu yang dipilih [1-2]: ')
         j=0
         index=0
-        if inputmenu1==1 :
+        if inputmenu1=='1' :
             b=0
             kodechg=input('Masukkan kode pasien yang ingin dihapus: ')
             for a in kodepasien :
@@ -55,7 +55,7 @@ def menu4():
                         n=1
             else :
                 print('Kode pasien tidak ditemukan !')
-        if inputmenu1==2 :
+        if inputmenu1=='2' :
             k=1
             menu0()
 
@@ -70,10 +70,10 @@ def menu3():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
+        inputmenu1=input('Masukkan menu yang dipilih [1-2]: ')
         j=0
         index=0
-        if inputmenu1==1 :
+        if inputmenu1=='1' :
             b=0
             kodechg=input('Masukkan kode pasien yang ingin diubah: ')
             for a in kodepasien :
@@ -120,7 +120,7 @@ def menu3():
                         l=1
             else :
                 print('Kode pasien tidak ditemukan !')
-        if inputmenu1==2 :
+        if inputmenu1=='2' :
             k=1
             menu0()
 
@@ -142,9 +142,9 @@ def menu2():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
+        inputmenu1=input('Masukkan menu yang dipilih [1-2]: ')
         j=0
-        if inputmenu1==1 :
+        if inputmenu1=='1' :
             b=0
             kodeadd=input('Masukkan kode pasien baru : ')
             for a in kodepasien :
@@ -175,7 +175,7 @@ def menu2():
                         l=1
                     if cek=='N':
                         l=1
-        if inputmenu1==2 :
+        if inputmenu1=='2' :
             k=1
             menu0()
 
@@ -191,9 +191,9 @@ def menu1():
     3. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih [1-3]: '))
+        inputmenu1=input('Masukkan menu yang dipilih [1-3]: ')
         j=0
-        if inputmenu1==1 :
+        if inputmenu1=='1' :
             jkodepasien=len(kodepasien)
             if jkodepasien != 0 :
                 print('\nDaftar Pasien :')
@@ -204,21 +204,21 @@ def menu1():
             else :
                 print('!!!!!!!!!!! Tidak ada data pasien !!!!!!!!!!!')
 
-        if inputmenu1==2 :
+        if inputmenu1=='2' :
             b=0
             inputmenu11=input('Masukkan kode pasien: ')
             for a in kodepasien :
                 if a == inputmenu11 :
                     b=1
                     break
-            if b == 1 :
+            if b == '1' :
                 print('Data pasien dengan kode {} :'.format(inputmenu11))
                 header ()
                 j=kodepasien.index(inputmenu11)
                 datapasien(j)
             else :
                 print('Data Pasien tidak ditemukan!')
-        if inputmenu1==3 :
+        if inputmenu1=='3' :
             k=1
             menu0()
 
@@ -235,24 +235,24 @@ def menu0() :
         5. Exit
         ''')
             global inputmenu
-            inputmenu=int(input('Masukkan menu yang dipilih [1-5]: '))
-            if inputmenu==1 :
+            inputmenu=input('Masukkan menu yang dipilih [1-5]: ')
+            if inputmenu=='1' :
                 menu1()
                 i=1
                 break
-            elif inputmenu==2 :
+            elif inputmenu=='2' :
                 menu2()
                 i=1
                 break
-            elif inputmenu==3 :
+            elif inputmenu=='3' :
                 menu3()
                 i=1
                 break
-            elif inputmenu==4 :
+            elif inputmenu=='4' :
                 menu4()
                 i=1
                 break
-            elif inputmenu==5 :
+            elif inputmenu=='5' :
                 print('Anda telah mengakhiri sesi program ini. Terima kasih & Sehat selalu !')
                 i=1
                 break
