@@ -8,13 +8,13 @@ noHp =['089532977853','089532966728','089530019927','0225422398']
 
 # Command Header Data Pasien
 def header() :
-    print(f"{'Kode' : <5}{'Nama' : ^10}{'Jenis': ^8}{'Usia': ^8}{'Berat': ^8}{'Tinggi': ^10}{'No Hp': <15}")
+    print(f"{'Kode' : <10}{'Nama' : <10}{'Jenis': <8}{'Usia': ^8}{'Berat': ^10}{'Tinggi': ^10}{'No Hp': <15}")
 
 # Command Tabel Data Pasien
 def datapasien (j) :
-    print(f"{kodepasien[j] :<5}{nama[j] : ^10}{jenis[j] : ^8}{usia[j] : ^8}{berat[j] : ^10}{tinggi[j] : ^8}{noHp[j] : <15}")
+    print(f"{kodepasien[j] :<10}{nama[j] : <10}{jenis[j] : ^8}{usia[j] : ^8}{berat[j] : ^10}{tinggi[j] : ^10}{noHp[j] : <15}")
 
-# Command Menu 4
+# Command Menu 4 (Delete Data)
 def menu4():
     k=0
     while k==0 :
@@ -25,7 +25,7 @@ def menu4():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih : '))
+        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
         j=0
         index=0
         if inputmenu1==1 :
@@ -59,7 +59,7 @@ def menu4():
             k=1
             menu0()
 
-# Command Menu 3
+# Command Menu 3 (Update Data)
 def menu3():
     k=0
     while k==0 :
@@ -70,7 +70,7 @@ def menu3():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih : '))
+        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
         j=0
         index=0
         if inputmenu1==1 :
@@ -123,7 +123,7 @@ def menu3():
             k=1
             menu0()
 
-# Command Menu 2
+# Command Menu 2 (Create Data)
 def menu2():
     global kodepasien
     global nama
@@ -141,7 +141,7 @@ def menu2():
     2. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih : '))
+        inputmenu1=int(input('Masukkan menu yang dipilih [1-2]: '))
         j=0
         if inputmenu1==1 :
             b=0
@@ -178,7 +178,7 @@ def menu2():
             k=1
             menu0()
 
-# Command Menu 1
+# Command Menu 1 (Read Data)
 def menu1():
     k=0
     while k==0 :
@@ -190,7 +190,7 @@ def menu1():
     3. Kembali ke menu utama
     ''')
         global inputmenu1
-        inputmenu1=int(input('Masukkan menu yang dipilih : '))
+        inputmenu1=int(input('Masukkan menu yang dipilih [1-3]: '))
         j=0
         if inputmenu1==1 :
             jkodepasien=len(kodepasien)
@@ -214,7 +214,6 @@ def menu1():
                 print('Data pasien dengan kode {} :'.format(inputmenu11))
                 header ()
                 j=kodepasien.index(inputmenu11)
-                print(j)
                 datapasien(j)
             else :
                 print('Data Pasien tidak ditemukan!')
@@ -235,7 +234,7 @@ def menu0() :
         5. Exit
         ''')
             global inputmenu
-            inputmenu=int(input('Masukkan menu yang dipilih : '))
+            inputmenu=int(input('Masukkan menu yang dipilih [1-5]: '))
             if inputmenu==1 :
                 menu1()
                 i=1
@@ -261,4 +260,3 @@ def menu0() :
                 ''')
 
 menu0()
-
