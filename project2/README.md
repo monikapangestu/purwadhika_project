@@ -7,6 +7,7 @@ Project2 ini terkait dengan proses data analysis mulai dari data preparation dam
 
 ## DB 
    ![Alt](https://github.com/monikapangestu/purwadhika_project/blob/2a69658de2696dd618f18d17a07207a3ab379de0/image/erd%20.png "Title")
+   
    source : https://github.com/ahmed-gharib89/sakila-dvd-rental-database-analysis
 
 ## Analysis Perform by
