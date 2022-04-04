@@ -6,7 +6,7 @@ Project2 ini terkait dengan proses data analysis mulai dari data preparation dam
 1. https://downloads.mysql.com/docs/sakila-db.tar.gz
 
 ## DB 
-    ![Alt](/image/erd .png "Title")
+   ![Alt](/images/Northwind.png "Title")
 
 ## Analysis Perform by
 Monika Pangestu - monikapangestu20@gmail.com
