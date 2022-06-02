@@ -26,8 +26,5 @@ Data data_bank_marketing_campaign.csv terdiri atas beberapa atribut, dan atribut
 | poutcome | Categorical | Hasil dari marketing campaign sebelumnya |
 | deposit | Categorical | Apakah customer melakukan deposit ? <YES/NO> |
 
-## DB 
-    ![Alt](/image/erd .png "Title")
-
-## Analysis Perform by
+## Analysis & Modelling Perform by
 Monika Pangestu - monikapangestu20@gmail.com
